@@ -1,0 +1,9 @@
+# 仮公開中：検索エンジンのクロールは拒否する。
+# ただし、チャットの Claude がユーザーの依頼でページを読めるよう Claude-User のみ許可。
+# 本公開時は「User-agent: *」の Disallow を「Allow: /」に変更し、
+# 各 HTML の <meta name="robots" content="noindex, nofollow"> も削除する。
+User-agent: Claude-User
+Allow: /
+
+User-agent: *
+Disallow: /
